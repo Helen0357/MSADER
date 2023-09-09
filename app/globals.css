@@ -2,26 +2,429 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url('../fonts/Rubik-Light.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url('../fonts/Rubik-LightItalic.ttf');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url('../fonts/Rubik-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url('../fonts/Rubik-Italic.ttf');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url('../fonts/Rubik-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url('../fonts/Rubik-MediumItalic.ttf');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url('../fonts/Rubik-SemiBold.ttf');
+  font-weight:600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url('../fonts/Rubik-SemiBoldItalic.ttf');
+  font-weight:600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url('../fonts/Rubik-Bold.ttf');
+  font-weight:700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url('../fonts/Rubik-BoldItalic.ttf');
+  font-weight:700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url('../fonts/Rubik-ExtraBold.ttf');
+  font-weight:800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url('../fonts/Rubik-ExtraBoldItalic.ttf');
+  font-weight:800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url('../fonts/Rubik-Black.ttf');
+  font-weight:900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url('../fonts/Rubik-BlackItalic.ttf');
+  font-weight:900;
+  font-style: italic;
+}
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --main-color: #2F8E81;
+  --second-color:#19554B;
+  --light-color: #ffffff;
+}
+.mainGreen {
+  color: #19554B;
+}
+.navbar , .landing , nav {
+  background-color: var(--main-color) !important;
+  border: none;
+
+}
+nav ul  li {
+  font-size: 13px;
+  color: var(--light-color);
+}
+nav ul li button{
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid white;
+  padding: 9px 25px !important;
+
+}
+.landing  section:first-of-type{
+  flex-basis: 40%;
+
+}
+.landing  section:last-of-type {
+  color: var(--light-color);
+  flex-basis: 50%;
+}
+.landing  section:last-of-type h1 {
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 1;
+}
+.landing  section:last-of-type p {
+  font-size: 19px;
+  max-width: 70%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+.landing-btn button {
+  font-weight: 300;
+  background-color: var(--second-color);
+  border-radius: 30px;
+  font-size: 13px;
+  padding: 8px 20px;
+}
+/* latest news */
+.latest-news h1 {
+  color: var(--main-color);
+}
+.cards-group .card{
+  transition: 0.3s;
+}
+.cards-group .card span.line {
+  display: block;
+  background-color: #FFBC05;
+  width: 70px;
+  height: 5px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 14px;
+}
+.cards-group .card span.date {
+  color: #C9D3D2;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.cards-group .card p {
+  font-weight: 500;
+  line-height: 1.4;
+  font-size: 15px;
+  margin-bottom: 23px;
+  max-width: 80%;
+}
+.cards-group .card a {
+  color: var(--main-color);
+  font-size: 14px;
+  font-weight: 800;
+
+}
+.read-more a {
+  background-color: var(--second-color);
+  color: #ffffff;
+  border-radius: 26px;
+  padding: 11px 40px;
+  font-size: 13px;
+  font-weight: 400;
+}
+.request-demo {
+  margin-top: 150px;
+  background-image: url('/assets/Rectangle75.svg');
+  padding: 70px 37px;
+}
+.request-demo h2 {
+  color: var(--light-color);
+  font-weight: 800;
+  flex-basis: 34%;
+  line-height: 1.2;
+  font-size: 28px;
+}
+.request-demo a {
+  color: var(--second-color);
+  font-size: 14px;
+}
+.footer {
+  background-color: var(--second-color);
+  color: var(--light-color);
+}
+.footer ul li {
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+.footer .subscribe p {
+  max-width: 85%;
+  font-weight: 300;
+
+}
+.footer .subscribe div input{
+  padding: 10px 19px 10px;
+  width: 54%;
+  outline: none;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.footer .subscribe div button{
+  position: absolute;
+    left: 43%;
+  background: #2F8E81;
+  padding: 10px 40px;
+  border-radius: 34px;
+  font-weight: 300;
+
+  font-size: 14px;
+}
+
+.footer  span{
+  background: white;
+  width: 100%;
+  height: 1px;
+  display: block;
+  opacity: 0.3;
+}
+.footer .end{
+  opacity: 0.5;
+  font-size: 15px;
+  font-weight: 300;
+}
+.aboutUs section:first-of-type h2 {
+color: var(--second-color);
+font-size: 26px
+}
+.aboutUs section:first-of-type p{
+  font-weight: 400;
+}
+.aboutUs section:nth-of-type(2) > div {
+  border: 1px solid #efefef91;
+  flex-basis:50%;
+  padding: 30px;
+}
+.aboutUs section:nth-of-type(2) > div h4 {
+  color: var(--main-color);
+  font-weight: 800;
+  font-size: 15px;
+}
+.aboutUs section:nth-of-type(2) > div  p {
+  color: #9A9A9A;
+  font-size: 14px;
+}
+.services {
+  background: #c9d3d2 url('/assets/MaskGroup2.png');
+  padding: 80px 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  position: relative;
+
+}
+.services .cont {
+  position: relative;
+  z-index: 10;
+}
+.services::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #c9d3d2;
+  opacity: 0.95;
+  z-index: 1;
+}
+.services h2 {
+  color: var(--main-color);
+}
+.services div.relative img:last-of-type {
+left: -23px;
+bottom: -27px;
+z-index: -1;
+}
+.services .cont > div {
+  flex-basis: 49%;
+}
+.whyUs {
+  background-color: var(--main-color);
+}
+.none {
+  display: none;
+}
+.side {
+  height: 560px;
+}
+.why-us  >div {
+flex-basis: 50%;
+}
+.navbar ul li:not(:last-of-type){
+  position: relative;
+  transition: 0.3s;
+}
+.navbar ul li::after{
+position: absolute;
+content : '';
+bottom: 0;
+left: 0;
+width: 0;
+height: 1px;
+background-color: white;
+transition: 0.3s;
+
+}
+.navbar ul li:hover::after {
+  width: 100%;
+}
+.more {
+  transition: 0.3s;
+}
+.more:hover{
+  background-color: #2f8e81;
+    border: 1px solid white;
+    transform: scale(1.1);
+
+}
+.card:hover {
+  box-shadow: 10px 10px 10px #eee ,-4px 0px 10px #eee;
+  transform: translateY(-10px);
+}
+.card:hover .c-content {
+  padding: 0 12px 15px;
+
+}
+.shortflex{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card:hover .shortflex svg {
+  animation: move infinite 1.3s linear;
+
+}
+.servLink {
+  transition: 0.5s;
+}
+.servLink:hover svg{
+  animation: move infinite 1.3s linear;
+
+}
+.footer ul li{
+  transition: 0.5s;
+}
+.footer ul li:hover{
+  margin-left: 5px;
+}
+@keyframes move {
+  0% , 100%{
+    transform: translateX(0);
+  }
+  25% , 75% {
+    transform: translateX(20px);
+
+  }
+  50% {
+    transform: translateX(10px);
+
   }
 }
+@media (max-width: 460px) {
+  .land-pic {
+    display: none;
+  }
+  .landing section:last-of-type {
+    flex-basis: 100%;
+  }
+  .landing section:last-of-type h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .landing section:last-of-type p{
+    max-width: 100%;
+  }
+  .card {
+    box-shadow: 10px 10px 10px #eee ,-4px 0px 10px #eee;
+  
+  margin-bottom: 20px;
+  }
+  .card .c-content {
+    padding: 0 12px 15px;
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  }
+  .request-demo {
+margin-top: 90px;
+  }
+  .request-demo h2 {
+    flex-basis: 100%;
+    font-size: 22px;
+    text-align: center;
+  }
+  .aboutUs section:nth-of-type(2) > div{
+    flex-basis: 100%;
+  }
+  .services .cont > div{
+    flex-basis: 100%;
+
+  }
+  .side{
+    height: auto;
+  }
+  .why-us  >div {
+    flex-basis: 100%;
+    }
 }
